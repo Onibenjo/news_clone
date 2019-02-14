@@ -1,0 +1,29 @@
+{
+  "name": "news_clone",
+  "version": "1.0.0",
+  "description": "A clone of hacker news site",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "SET NODE_ENV=production & node server.js",
+    "build": "next build",
+    "deploy": "now --public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Onibenjo/news_clone.git"
+  },
+  "author": "Onibenjo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Onibenjo/news_clone/issues"
+  },
+  "homepage": "https://github.com/Onibenjo/news_clone#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^8.0.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "sw-precache-webpack-plugin": "^0.11.5"
+  }
+}
