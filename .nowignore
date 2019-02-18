@@ -1,0 +1,30 @@
+.gitignore
+.next
+.git
+.cache
+node_modules
+
+# dependencies
+/node_modules
+
+node_modules
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+/.next
+
+
+
+.next
+
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

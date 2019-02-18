@@ -1,6 +1,6 @@
 {
   "name": "Hack News Update",
-  "short_name": "hack-news(tech)",
+  "short_name": "HackNews",
   "lang": "en-GB",
   "start_url": "/",
   "display": "standalone",

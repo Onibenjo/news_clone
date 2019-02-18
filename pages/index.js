@@ -1,18 +1,19 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 import Error from "next/error";
 import StoryList from "../components/StoryList";
 import Layout from "../components/Layout";
 import Link from "next/link";
 
-class Index extends React.Component {
+class Index extends Component {
   static async getInitialProps({ req, res, query }) {
     let stories, page;
     try {
       page = Number(query.page) || 1;
-      const res = await fetch(
-        `https://node-hnapi.herokuapp.com/news?page=${page}`
-      );
+      const res = await fetch(`https://api.hackerwebapp.com/news?page=${page}`);
+      // const res = await fetch(
+      //   `https://api.hackerwebapp.com/news?page=${page}`
+      // );
       stories = await res.json();
     } catch (err) {
       console.log(err);
@@ -32,6 +33,10 @@ class Index extends React.Component {
         .catch(err => {
           console.warn("service worker registration failed", err.message);
         });
+
+      navigator.serviceWorker.ready.then(function(registration) {
+        console.log("Service Worker Ready");
+      });
     }
   }
 
