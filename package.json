@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
-    "start": "SET NODE_ENV=production & node server.js",
+    "start": "SET NODE_ENV=production&&node server.js",
     "build": "next build",
-    "deploy": "now --public"
+    "deploy": "now --public",
+    "now-build": "next build"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,8 @@
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
     "next": "^8.0.1",
+    "next-offline": "^3.3.5",
     "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "sw-precache-webpack-plugin": "^0.11.5"
+    "react-dom": "^16.8.1"
   }
 }

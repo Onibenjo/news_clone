@@ -2,12 +2,14 @@ import React from "react";
 import Link from "next/link";
 
 const StoryList = ({ stories }) => {
+  let num = 0;
   return (
     <div className="story-list">
       {stories.map(story => (
         <div className="story" key={story.id}>
-          <hr />
           <h2 className="story-title">
+            {(num += 1)}
+            {". "}
             <a href={story.url}>{story.title}</a>
           </h2>
           <div className="story-details">
@@ -23,17 +25,14 @@ const StoryList = ({ stories }) => {
       ))}
 
       <style jsx>{`
-        .story-list {
-          padding: 0 2rem;
-        }
         .story {
-          padding: 1rem 0;
+          padding: 0.8rem 1.2rem;
           margin: 0;
+          border-bottom: 1px solid #d1cace;
         }
         .story-title {
           font-size: 1rem;
           font-weight: 400;
-          margin: 0;
           margin-bottom: 0.4rem;
         }
         .story-title a {
@@ -49,7 +48,7 @@ const StoryList = ({ stories }) => {
         }
         .story-details span {
           margin-right: 1rem;
-          color: red;
+          color: #333;
         }
         .story-details a {
           color: #6600ff;

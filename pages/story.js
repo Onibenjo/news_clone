@@ -9,9 +9,7 @@ class Story extends Component {
     let story;
     try {
       const storyId = query.id;
-      const res = await fetch(
-        `https://node-hnapi.herokuapp.com/item/${storyId}`
-      );
+      const res = await fetch(`https://api.hackerwebapp.com/item/${storyId}`);
       story = await res.json();
     } catch (error) {
       story = null;

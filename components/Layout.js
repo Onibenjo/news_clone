@@ -43,7 +43,7 @@ const Layout = ({ children, title, description, backButton }) => {
           background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
           background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
 
-          padding: 1rem;
+          padding: 1.5rem;
         }
         nav > * {
           display: inline-block;
@@ -62,6 +62,11 @@ const Layout = ({ children, title, description, backButton }) => {
         }
       `}</style>
       <style global jsx>{`
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
         body {
           background: #fff;
           font-family: Verdana, Geneva, sans-serif;
